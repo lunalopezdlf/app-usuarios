@@ -1,59 +1,122 @@
-# AppUsuarios
+# Usuarios App - Angular CRUD con API
+## 1. Introducción
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.4.
+app-usuarios es una aplicación Angular (v21) que implementa un CRUD completo de usuarios mediante una API externa de pruebas. Permite:
 
-## Development server
+- Listar todos los usuarios en un grid responsive.
+- Ver detalle de cada usuario.
+- Crear un nuevo usuario mediante un formulario con validaciones.
+- Actualizar un usuario reutilizando el mismo formulario.
+- Eliminar usuarios con confirmación mediante sweetalert2.
 
-To start a local development server, run:
+El proyecto utiliza Bootstrap 5 para estilos, ngx-sonner para notificaciones toast y signals de Angular para la gestión reactiva de datos.
 
+===
+## 2. Objetivos
+Consumir una API externa
+Implementar un CRUD completo
+Usar Angular con Signals
+Crear formularios reactivos con validación
+Gestionar rutas dinámicas
+Aplicar diseño con Bootstrap
+
+===
+## 3. Tecnologías
+| Tecnología | Uso |
+|-----------|------|
+| **Angular 21** | Framework principal |
+| **TypeScript** | Tipado y lógica |
+| **Bootstrap 5** | Estilos y layout |
+| **SweetAlert2** | Alertas visuales |
+| **ngx-sonner** | Notificaciones toast |
+| **API REST** | https://peticiones.online/users |
+| **HTML5 / CSS3** 
+
+===
+## 4. Estructura del proyecto
+
+src/
+│
+├─ app/
+│   ├─ components/
+│   │   └─ user-card/          # Tarjeta individual de usuario con acciones CRUD
+│   │
+│   ├─ pages/
+│   │   ├─ home/               # Listado completo de usuarios
+│   │   ├─ user-view/          # Vista detalle usuario
+│   │   ├─ user-form/          # Formulario crear/actualizar usuario
+│   │   └─ error404/           # Página de error 404
+│   │
+│   ├─ shared/
+│   │   ├─ header/             # Barra de navegación principal
+│   │   └─ footer/             # Footer
+│   │
+│   ├─ services/
+│   │   └─ users.service.ts    # Servicio para consumir API externa
+│   │
+│   ├─ interfaces/
+│   │   └─ iuser.interface.ts  # Interfaces IUser e IUserResponse
+│   │
+│   ├─ app.routes.ts           # Configuración de rutas
+│   ├─ app.config.ts           # Configuración de HTTP y signals
+│   ├─ app.html                # Layout principal
+│   └─ styles.css              # Estilos globales
+│
+└─ public/
+    └─ images/                 # Iconos y fotos de prueba
+
+## 5. Funcionalidades
+
+✔ Listado de usuarios
+✔ Vista detalle
+✔ Crear usuario
+✔ Actualizar usuario
+✔ Eliminar usuario
+✔ Validación de formulario
+✔ Alertas visuales
+
+## 6. Instalación y configuración
+1- Clonar el repositorio
 ```bash
-ng serve
+git clone https://github.com/lunalopezdlf/app-usuarios.git
+cd app-usuarios
 ```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+2- Instalar dependencias:
 ```bash
-ng generate component component-name
+npm install
 ```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
+3- Instalar librerías necesarias:
 ```bash
-ng generate --help
+npm install bootstrap
+npm install sweetalert2
+npm install ngx-sonner
 ```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
+4- Configurar Angular.json para Bootstrap:
+```ts
+"styles": [
+  "node_modules/bootstrap/dist/css/bootstrap.min.css",
+  "src/styles.css"
+],
+"scripts": [
+  "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+]
 ```
+5- Ejecutar la aplicación:
+ng serve -o
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## 7. API utilizada
+https://peticiones.online/users
 
-## Running unit tests
+## 8. Autora
+Luna López
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+## 9. Vista previa
 
-```bash
-ng test
-```
+![Home](public/images/Home.png)
 
-## Running end-to-end tests
+![User](public/images/User.jpeg)
 
-For end-to-end (e2e) testing, run:
+![Create_User](public/images/Create_user.jpeg)
 
-```bash
-ng e2e
-```
+![Update_User](public/images/Update_user.jpeg)
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
