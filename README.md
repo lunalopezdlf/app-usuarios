@@ -34,7 +34,7 @@ Aplicar diseño con Bootstrap
 
 ===
 ## 4. Estructura del proyecto
-
+```
 src/
 │
 ├─ app/
@@ -64,17 +64,20 @@ src/
 │
 └─ public/
     └─ images/                 # Iconos y fotos de prueba
+```
 
-## 5. Funcionalidades
+===
+## 5. Funcionalidades
 
-✔ Listado de usuarios
-✔ Vista detalle
-✔ Crear usuario
-✔ Actualizar usuario
-✔ Eliminar usuario
-✔ Validación de formulario
-✔ Alertas visuales
+- Listado de usuarios
+- Vista detalle
+- Crear usuario
+- Actualizar usuario
+- Eliminar usuario
+- Validación de formulario
+- Alertas visuales
 
+===
 ## 6. Instalación y configuración
 1- Clonar el repositorio
 ```bash
@@ -104,12 +107,15 @@ npm install ngx-sonner
 5- Ejecutar la aplicación:
 ng serve -o
 
+===
 ## 7. API utilizada
 https://peticiones.online/users
 
+===
 ## 8. Autora
 Luna López
 
+===
 ## 9. Vista previa
 
 ![Home](public/images/Home.png)
