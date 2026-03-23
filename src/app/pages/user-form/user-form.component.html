@@ -1,1 +1,126 @@
-<p>user-form works!</p>
+<form [formGroup]="userForm" (ngSubmit)="submitForm()" class="p-4 rounded shadow-lg bg-white container" [class.update-box]="userMode() === 'updateuser'">
+
+    <!-- TÍTULO -->
+    <h3 class="text-center mb-4">
+        @if (userMode() === 'newuser') {
+        NUEVO USUARIO
+        }
+        @if (userMode() === 'updateuser') {
+        ACTUALIZAR USUARIO
+        }
+    </h3>
+
+    <div class="row g-3">
+
+        <!-- NOMBRE -->
+        <div class="col-12 col-md-6">
+        <label for="first_name" class="form-label">Nombre Usuario</label>
+
+        <input 
+            type="text" 
+            class="form-control"
+            [class.input-update]="userMode() === 'updateuser'"
+            id="first_name"
+            [placeholder]="userMode() === 'newuser' ? 'Ej: Juan' : ''"
+            formControlName="first_name">
+
+        @if(checkControl('first_name', 'required')){
+            <p class="error-message">Campo requerido</p>
+        }
+        @if(checkControl('first_name', 'minlength')){
+            <p class="error-message">Mínimo 3 caracteres</p>
+        }
+        @if(checkControl('first_name', 'maxlength')){
+            <p class="error-message">Máximo 20 caracteres</p>
+        }
+        </div>
+
+        <!-- APELLIDOS -->
+        <div class="col-12 col-md-6">
+        <label for="last_name" class="form-label">Apellido Usuario</label>
+
+        <input 
+            type="text" 
+            class="form-control"
+            [class.input-update]="userMode() === 'updateuser'"
+            id="last_name"
+            [placeholder]="userMode() === 'newuser' ? 'Ej: García López' : ''"
+            formControlName="last_name">
+
+        @if(checkControl('last_name', 'required')){
+            <p class="error-message">Campo requerido</p>
+        }
+        @if(checkControl('last_name', 'minlength')){
+            <p class="error-message">Mínimo 3 caracteres</p>
+        }
+        @if(checkControl('last_name', 'maxlength')){
+            <p class="error-message">Máximo 50 caracteres</p>
+        }
+        </div>
+
+        <!-- EMAIL -->
+        <div class="col-12 col-md-6">
+        <label for="email" class="form-label">Email Usuario</label>
+
+        <input 
+            type="text" 
+            class="form-control"
+            [class.input-update]="userMode() === 'updateuser'"
+            id="email"
+            [placeholder]="userMode() === 'newuser' ? 'Ej: usuario@gmail.com' : ''"
+            formControlName="email">
+
+        @if(checkControl('email', 'required')){
+            <p class="error-message">Campo requerido</p>
+        }
+        @if(checkControl('email', 'pattern')){
+            <p class="error-message">El email no está bien formado</p>
+        }
+        </div>
+
+        <!-- IMAGEN -->
+        <div class="col-12 col-md-6">
+        <label for="image" class="form-label">Imagen Usuario (URL)</label>
+
+        <input 
+            type="text" 
+            class="form-control"
+            [class.input-update]="userMode() === 'updateuser'"
+            id="image"
+            [placeholder]="userMode() === 'newuser' ? 'Ej: https://imagen.com/foto.jpg' : ''"
+            formControlName="image">
+
+        @if(checkControl('image', 'required')){
+            <p class="error-message">Campo requerido</p>
+        }
+        @if(checkControl('image', 'pattern')){
+            <p class="error-message">Formato de imagen no válido</p>
+        }
+        </div>
+
+    </div>
+
+    <!-- BOTONES -->
+    <div class="text-center mt-4">
+
+        @if (userMode() === 'newuser') {
+        <button 
+            type="submit" 
+            class="btn btn-success btn-lg submit-btn"
+            [disabled]="!userForm.valid">
+            Guardar
+        </button>
+        }
+
+        @if (userMode() === 'updateuser') {
+        <button 
+            type="submit" 
+            class="btn btn-info btn-lg submit-btn"
+            [disabled]="!userForm.valid">
+            Actualizar
+        </button>
+        }
+
+    </div>
+
+</form>
