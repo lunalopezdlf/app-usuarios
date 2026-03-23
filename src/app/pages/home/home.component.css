@@ -1,0 +1,9 @@
+.nav-btn {
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.nav-btn:hover{
+    background-color: black;
+    transform: scale(1.05);
+    color: rgb(228, 204, 204);
+}

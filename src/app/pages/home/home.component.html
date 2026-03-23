@@ -1,0 +1,36 @@
+<div class="container">
+  
+    <div class="d-flex justify-content-center align-items-center gap-4 py-3">
+
+        <button 
+            class="btn btn-outline-light btn-lg d-flex align-items-center gap-2 shadow-sm nav-btn bg-dark"
+            (click)="goToPrev()"
+            [disabled]="currentPage === 1">
+            <i class="bi bi-arrow-left-circle"></i>
+            Anterior
+        </button>
+
+        <span class="text-black fw-bold fs-5">
+            Página {{ currentPage }} / {{ totalPages }}
+        </span>
+
+        <button 
+            class="btn btn-outline-light btn-lg d-flex align-items-center gap-2 shadow-sm nav-btn bg-dark"
+            (click)="goToNext()"
+            [disabled]="currentPage === totalPages">
+            Siguiente
+            <i class="bi bi-arrow-right-circle"></i>
+        </button>
+
+    </div>
+
+    <section class="users-grid row g-5">
+
+        @for(user of usersList(); track user._id){
+        <article class="col-12 col-md-6 col-lg-4 col-xl-3">
+            <app-user-card [user]="user"></app-user-card>
+        </article>
+        }
+
+    </section>
+</div>
