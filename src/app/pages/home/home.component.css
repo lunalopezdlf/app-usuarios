@@ -1,5 +1,5 @@
 .nav-btn {
-  transition: transform 0.2s ease, filter 0.2s ease;
+    transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .nav-btn:hover{

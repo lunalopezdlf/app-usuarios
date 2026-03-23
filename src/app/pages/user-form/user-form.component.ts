@@ -6,10 +6,10 @@ import { IUser } from '../../interfaces/iuser.interface';
 import { toast } from 'ngx-sonner';
 
 @Component({
-  selector: 'app-user-form',
-  imports: [ReactiveFormsModule],
-  templateUrl: './user-form.component.html',
-  styleUrl: './user-form.component.css',
+    selector: 'app-user-form',
+    imports: [ReactiveFormsModule],
+    templateUrl: './user-form.component.html',
+    styleUrl: './user-form.component.css',
 })
 export class UserFormComponent {
     _id = input<string>();

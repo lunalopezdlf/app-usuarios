@@ -4,7 +4,7 @@ import { IUser, IUserResponse } from '../interfaces/iuser.interface';
 import { lastValueFrom } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root',
+    providedIn: 'root',
 })
 export class UsersService {
     private httpClient = inject(HttpClient)
