@@ -1,0 +1,47 @@
+.user-photo-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.user-photo-hover:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 25px rgba(255,255,255,0.4);
+}
+
+.user-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.action-icon {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.action-icon:hover {
+  transform: scale(1.25);
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.user-card {
+  height: 100%;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+}
