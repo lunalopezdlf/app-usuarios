@@ -1,34 +1,34 @@
 
 .user-photo-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .user-photo-hover:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0,0,0,0.3);
 }
 
 .max-img {
-  max-width: 240px;
-  max-height: 240px;
-  object-fit: cover;
+    max-width: 240px;
+    max-height: 240px;
+    object-fit: cover;
 }
 
 .divider {
-  width: 2px;
-  height: 220px;
+    width: 2px;
+    height: 220px;
 }
 
 .btn-hover {
-  transition: background-color 0.3s ease, transform 0.1s;
+    transition: background-color 0.3s ease, transform 0.1s;
 }
 
 .btn-hover:hover {
-  transform: scale(1.03);
-  filter: brightness(1.15);
+    transform: scale(1.03);
+    filter: brightness(1.15);
 }
 
 .user-detail-card {
-  max-width: 1000px;
-  border-radius: 12px;
+    max-width: 1000px;
+    border-radius: 12px;
 }

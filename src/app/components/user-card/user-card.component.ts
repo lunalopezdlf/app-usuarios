@@ -7,10 +7,10 @@ import Swal from 'sweetalert2';
 import { toast } from 'ngx-sonner';
 
 @Component({
-  selector: 'app-user-card',
-  imports: [RouterLink, CommonModule],
-  templateUrl: './user-card.component.html',
-  styleUrl: './user-card.component.css',
+    selector: 'app-user-card',
+    imports: [RouterLink, CommonModule],
+    templateUrl: './user-card.component.html',
+    styleUrl: './user-card.component.css',
 })
 export class UserCardComponent {
     user = input<IUser>();

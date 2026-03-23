@@ -5,10 +5,10 @@ import { UsersService } from '../../services/users.service';
 import { IUser } from '../../interfaces/iuser.interface';
 
 @Component({
-  selector: 'app-home',
-  imports: [CommonModule, UserCardComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css',
+    selector: 'app-home',
+    imports: [CommonModule, UserCardComponent],
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.css',
 })
 export class HomeComponent {
     usersList = signal<IUser[]>([]);

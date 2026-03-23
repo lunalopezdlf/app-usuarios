@@ -6,10 +6,10 @@ import { toast } from 'ngx-sonner';
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-user-view',
-  imports: [RouterLink],
-  templateUrl: './user-view.component.html',
-  styleUrl: './user-view.component.css',
+    selector: 'app-user-view',
+    imports: [RouterLink],
+    templateUrl: './user-view.component.html',
+    styleUrl: './user-view.component.css',
 })
 export class UserViewComponent {
     _id = input<string>();
