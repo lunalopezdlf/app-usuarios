@@ -1,0 +1,27 @@
+.update-box {
+  border: 3px solid #0dcaf0;
+  background: #eef6ff;
+}
+
+.input-update {
+  border-bottom: 3px solid #0dcaf0;
+}
+
+.error-message {
+  font-size: 12px;
+  color: tomato;
+  margin: 0;
+}
+
+.submit-btn {
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.form-control {
+  height: 45px;
+  font-size: 1rem;
+}
